@@ -1,0 +1,38 @@
+﻿@model CRUDWEB.Models.ParametroNuevo
+
+<h2>Nuevo Movimiento</h2>
+
+@using (Html.BeginForm("Nuevo", "MovimientosMVC", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.COD_CIA)
+        @Html.TextBoxFor(m => m.COD_CIA, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.COMPANIA_VENTA_3)
+        @Html.TextBoxFor(m => m.COMPANIA_VENTA_3, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ALMACEN_VENTA)
+        @Html.TextBoxFor(m => m.ALMACEN_VENTA, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.TIPO_MOVIMIENTO)
+        @Html.TextBoxFor(m => m.TIPO_MOVIMIENTO, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.TIPO_DOCUMENTO)
+        @Html.TextBoxFor(m => m.TIPO_DOCUMENTO, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.NRO_DOCUMENTO)
+        @Html.TextBoxFor(m => m.NRO_DOCUMENTO, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.COD_ITEM_2)
+        @Html.TextBoxFor(m => m.COD_ITEM_2, new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-success">Crear Movimiento</button>
+    <a href="@Url.Action("Consultar", "MovimientosMVC")" class="btn btn-default">Cancelar</a>
+}
